@@ -11,6 +11,11 @@ First, you'll need Rust. To install Rust and the `cargo` build tool, follow the 
 You also need to install the `wasm32-unknown-unknown` target to compile Rust to Wasm.
 If you're using rustup, you just need to run `rustup target add wasm32-unknown-unknown`.
 
+:::important
+The minimum supported Rust version (MSRV) for Yew is `1.45.0`. Older versions can cause unexpected issues accompanied by incomprehensible error messages.
+You can check your toolchain version using `rustup show` (under "active toolchain") or alternatively `rustc --version`. To update your toolchain, run `rustup update`.
+:::
+
 ## **Wasm Build Tools**
 
 Extra tooling is needed to facilitate the interop between WebAssembly and JavaScript. Additionally,
@@ -38,23 +43,15 @@ Because of this, it can only build libraries and doesn't provide useful tools li
 
 [Get started with `wasm-pack`](project-setup/using-wasm-pack.md)
 
-### [**`cargo-web`**](https://github.com/koute/cargo-web)
-
-This was the best preferred tool to use before the creation of `wasm-bindgen`.
-
-[Getting started with `cargo web`](project-setup/using-cargo-web.md)
-
 ### Comparison
 
-|                               | `trunk`                                                          | `wasm-pack`                                                                                          | `cargo-web`                                                                                                                                            |
-| ----------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Project Status                | Actively maintained                                              | Actively maintained by the [Rust / Wasm Working Group](https://rustwasm.github.io)                   | No Github activity for over 6 months                                                                                                                   |
-| Dev Experience                | Just works! Batteries included, no external dependencies needed. | Barebones. You'll need to write some scripts to streamline the experience or use the webpack plugin. | Works great for code but needs separate asset pipeline.                                                                                                |
-| Local Server                  | Supported                                                        | Only with webpack plugin                                                                             | Supported                                                                                                                                              |
-| Auto rebuild on local changes | Supported                                                        | Only with webpack plugin                                                                             | Supported                                                                                                                                              |
-| Asset handling                | Supported                                                        | Only with webpack plugin                                                                             | Static assets only                                                                                                                                     |
-| Headless Browser Testing      | [In Progress](https://github.com/thedodd/trunk/issues/20)        | [Supported](https://rustwasm.github.io/wasm-pack/book/commands/test.html)                            | [Supported](https://github.com/koute/cargo-web#features)                                                                                               |
-| Supported Targets             | <ul><li><code>wasm32-unknown-unknown</code></li></ul>            | <ul><li><code>wasm32-unknown-unknown</code></li></ul>                                                | <ul> <li><code>wasm32-unknown-unknown</code></li> <li><code>wasm32-unknown-emscripten</code></li> <li><code>asmjs-unknown-emscripten</code></li> </ul> |
-| `web-sys`                     | Compatible                                                       | Compatible                                                                                           | Incompatible                                                                                                                                           |
-| `stdweb`                      | Incompatible                                                     | Compatible                                                                                           | Compatible                                                                                                                                             |
-| Example Usage                 | [Sample app](./build-a-sample-app.md)                            | [Starter template](https://github.com/yewstack/yew-wasm-pack-minimal)                                | [Build script](https://www.github.com/yewstack/yew/tree/master/yew-stdweb/examples) for `yew-stdweb` examples                                          |
+|                               | `trunk`                                                          | `wasm-pack`                                                                                           |
+| ----------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------  |
+| Project Status                | Actively maintained                                              | Actively maintained by the [Rust / Wasm Working Group](https://rustwasm.github.io)                    |
+| Dev Experience                | Just works! Batteries included, no external dependencies needed. | Bare-bones. You'll need to write some scripts to streamline the experience or use the webpack plugin. |
+| Local Server                  | Supported                                                        | Only with webpack plugin                                                                              |
+| Auto rebuild on local changes | Supported                                                        | Only with webpack plugin                                                                              |
+| Asset handling                | Supported                                                        | Only with webpack plugin                                                                              |
+| Headless Browser Testing      | [In Progress](https://github.com/thedodd/trunk/issues/20)        | [Supported](https://rustwasm.github.io/wasm-pack/book/commands/test.html)                             |
+| Supported Targets             | <ul><li><code>wasm32-unknown-unknown</code></li></ul>            | <ul><li><code>wasm32-unknown-unknown</code></li></ul>                                                 |
+| Example Usage                 | [Sample app](./build-a-sample-app.md)                            | [Starter template](https://github.com/yewstack/yew-wasm-pack-minimal)                                 |

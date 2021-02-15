@@ -21,15 +21,34 @@
       "concepts/components/callbacks": {
         "title": "Callbacks"
       },
+      "concepts/components/children": {
+        "title": "Children"
+      },
       "concepts/components/properties": {
         "title": "Properties"
       },
       "concepts/components/refs": {
         "title": "Refs"
       },
-      "concepts/html": {
-        "title": "html!",
+      "concepts/function-components": {
+        "title": "Function Components",
         "sidebar_label": "Introduction"
+      },
+      "concepts/function-components/attribute": {
+        "title": "#[function_component]"
+      },
+      "concepts/function-components/custom-hooks": {
+        "title": "Custom Hooks"
+      },
+      "concepts/function-components/pre-defined-hooks": {
+        "title": "Pre-defined Hooks"
+      },
+      "concepts/html": {
+        "title": "HTML",
+        "sidebar_label": "Introduction"
+      },
+      "concepts/html/classes": {
+        "title": "Classes"
       },
       "concepts/html/components": {
         "title": "Components"
@@ -59,18 +78,12 @@
       "getting-started/build-a-sample-app": {
         "title": "Build a sample app"
       },
-      "getting-started/choose-web-library": {
-        "title": "Choosing a web library"
-      },
       "getting-started/examples": {
         "title": "Examples"
       },
       "getting-started/project-setup": {
         "title": "Project Setup",
         "sidebar_label": "Introduction"
-      },
-      "getting-started/project-setup/using-cargo-web": {
-        "title": "Using cargo-web"
       },
       "getting-started/project-setup/using-trunk": {
         "title": "Using trunk"
@@ -81,7 +94,7 @@
       "getting-started/starter-templates": {
         "title": "Starter templates"
       },
-      "intro": {
+      "index": {
         "title": "Introduction"
       },
       "more/css": {
@@ -178,7 +191,7 @@
       "version-0.17.3/getting-started/version-0.17.3-starter-templates": {
         "title": "Starter templates"
       },
-      "version-0.17.3/version-0.17.3-intro": {
+      "version-0.17.3/version-0.17.3-index": {
         "title": "Introduction"
       },
       "version-0.17.3/more/version-0.17.3-css": {
